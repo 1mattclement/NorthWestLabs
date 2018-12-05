@@ -24,6 +24,7 @@ namespace NorthWestLabs.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
             String username = form["Username"].ToString();
