@@ -114,10 +114,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AssayCatalog.cs" />
+    <Compile Include="Models\AssayTests.cs" />
     <Compile Include="Models\Compound.cs" />
     <Compile Include="Models\CompoundTests.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\TestCatalog.cs" />
     <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

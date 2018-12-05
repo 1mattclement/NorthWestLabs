@@ -11,7 +11,6 @@ namespace NorthWestLabs.Models
     public class TestCatalog
     {
         [Key]
-
         public int TestTypeID { get; set; }
         public int? EmployeeID { get; set; }
         public double TestPrice { get; set; }
