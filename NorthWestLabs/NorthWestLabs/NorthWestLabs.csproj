@@ -118,6 +118,7 @@
     <Compile Include="Models\CompoundTests.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\TestCatalog.cs" />
     <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
