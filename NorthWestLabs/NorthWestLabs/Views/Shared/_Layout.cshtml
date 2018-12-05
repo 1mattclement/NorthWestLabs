@@ -2,19 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    
+    
 </head>
-<div class="topnav">
-    <a href="@Url.Action("Index", "Home")" class="w3-bar-item w3-button">Home</a>
+<body>
+    <div class="topnav">
+        <a href="@Url.Action("Index", "Home")">Home</a>
 
-    <a href="@Url.Action("About", "Home")" class="w3-bar-item w3-button">About</a>
+        <a href="@Url.Action("About", "Home")">About</a>
 
-    <a href="@Url.Action("Contact", "Home")" class="w3-bar-item w3-button">Contact</a>
+        <a href="@Url.Action("Contact", "Home")">Contact</a>
 
+        <a href="@Url.Action("Login", "Home")">Customers</a>
+
+        <a href="@Url.Action("Login", "Home")">Employees</a>
+
+</body>
 </div>
 <body>
     <div class="container body-content">
