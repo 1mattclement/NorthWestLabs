@@ -23,5 +23,37 @@ namespace NorthWestLabs.Controllers
         {
             return View();
         }
+
+        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        {
+            String username = form["Username"].ToString();
+            String password = form["Password"].ToString();
+
+            if(string.Equals(username, "employee") && (string.Equals(password, "employee")))
+            {
+                return RedirectToAction("EmployeeInfo, Home"); //fix
+            }
+            else if (string.Equals(username, "customer") && (string.Equals(password, "customer")))
+            {
+                return RedirectToAction("CustomerInfo, Home"); //fix
+            }
+            else
+            {
+                return View();
+            }
+
+        }
+
+        [Authorize]
+        public ActionResult EmployeeInfo()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult CustomerInfo()
+        {
+            return View();
+        }
     }
 }
