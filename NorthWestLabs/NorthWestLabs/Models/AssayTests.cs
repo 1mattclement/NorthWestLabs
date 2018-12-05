@@ -7,16 +7,14 @@ using System.Web;
 
 namespace NorthWestLabs.Models
 {
-    [Table("TestCatalog")]
-    public class TestCatalog
+    [Table("AssayTests")]
+    public class AssayTests
     {
         [Key]
-
+        public int AssayTypeID { get; set; }
         public int TestTypeID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double TestPrice { get; set; }
-        public double MaterialsCost { get; set; }
-        public double BasePrice { get; set; }
-
+        public bool Required { get; set; }
+        public bool Conditional { get; set; }
+   
     }
 }
