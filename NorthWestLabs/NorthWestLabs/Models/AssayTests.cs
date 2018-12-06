@@ -16,5 +16,8 @@ namespace NorthWestLabs.Models
         public bool Required { get; set; }
         public bool Conditional { get; set; }
    
+        public virtual AssayCatalog AssayCatalog { get; set; }
+        
     }
+
 }
