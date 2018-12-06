@@ -4,20 +4,20 @@
     ViewBag.Title = "CreateWorkOrder";
 }
 
-<h2>CreateWorkOrder</h2>
+<h2>Create Work Order</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>WorkOrders</h4>
+    <h4>Work Orders</h4>
     <hr />
 
     <div class="form-group">
         <div class="col-md-10">
             @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "control-label col-md-2" })
-            @Html.DropDownListFor(model => model.CustomerID, new SelectList(ViewBag.Customers, "CustomerID", "CustFirstName")))
+            @Html.DropDownListFor(model => model.CustomerID, new SelectList(ViewBag.Customers, "CustomerID", "CustFirstName"))
         </div>
     </div>
 
