@@ -20,6 +20,7 @@ namespace NorthWestLabs.Models
         public string EmpLastName { get; set; }
         [DisplayName("Position")]
         public int? PositionID { get; set; }
+        public virtual Position Position { get; set; }
 
     }
 }
