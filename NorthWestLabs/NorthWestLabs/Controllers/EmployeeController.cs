@@ -33,10 +33,6 @@ namespace NorthWestLabs.Controllers
 
             WorkOrders workOrders = db.WorkOrders.Find(id);
 
-            if (workOrders == null)
-            {
-                return HttpNotFound();
-            }
             return View(db.WorkOrders.SqlQuery("SELECT * FROM WorkOrders WHERE CustomerID = " + id).ToList());
         }
 
@@ -49,10 +45,7 @@ namespace NorthWestLabs.Controllers
 
             CompoundTests compoundTests = db.CompoundTests.Find(id);
 
-            if (compoundTests == null)
-            {
-                return HttpNotFound();
-            }
+
             return View(db.CompoundTests.SqlQuery("SELECT * FROM CompoundTests WHERE WorkOrderID = " + id).ToList());
         }
 

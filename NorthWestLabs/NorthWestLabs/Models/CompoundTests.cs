@@ -22,7 +22,7 @@ namespace NorthWestLabs.Models
         public virtual Employees Employees { get; set; }//foreign key
         public int? StatusID { get; set; }//foreign key
         public virtual Status Status { get; set; }
-        public int WorkOrderID { get; set; }
+        public int? WorkOrderID { get; set; }
 
     }
 }
