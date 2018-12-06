@@ -36,7 +36,7 @@ namespace NorthWestLabs.Controllers
             {
                 return HttpNotFound();
             }
-            return View(db.WorkOrders.ToList());
+            return View(db.WorkOrders.SqlQuery("SELECT * FROM WorkOrders WHERE CustomerID = " + id).ToList());
         }
 
 
