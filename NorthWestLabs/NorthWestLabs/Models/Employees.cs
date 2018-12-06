@@ -14,9 +14,9 @@ namespace NorthWestLabs.Models
         [Key]
         public int EmployeeID { get; set; }
 
-        [DisplayName("First Name")]
+        [DisplayName("Employee First Name")]
         public string EmpFirstName { get; set; }
-        [DisplayName("Last Name")]
+        [DisplayName("Employee Last Name")]
         public string EmpLastName { get; set; }
         [DisplayName("Position")]
         public int? PositionID { get; set; }

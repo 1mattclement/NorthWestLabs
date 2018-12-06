@@ -14,11 +14,11 @@ namespace NorthWestLabs.Models
         [Key]
         public int CustomerID { get; set; }
 
-        [DisplayName("First Name")]
+        [DisplayName("Customer First Name")]
         [Required(ErrorMessage = "Please enter your first name!")]
         public string CustFirstName { get; set; }
 
-        [DisplayName("Last Name")]
+        [DisplayName("Customer Last Name")]
         [Required(ErrorMessage = "Please enter your last name!")]
         public string CustLastName { get; set; }
 
