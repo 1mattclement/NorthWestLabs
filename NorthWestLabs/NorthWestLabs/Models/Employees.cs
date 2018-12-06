@@ -12,7 +12,7 @@ namespace NorthWestLabs.Models
     public class Employees
     {
         [Key]
-        public int EmployeeId { get; set; }
+        public int EmployeeID { get; set; }
 
         [DisplayName("First Name")]
         public string EmpFirstName { get; set; }
