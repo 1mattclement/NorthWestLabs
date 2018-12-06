@@ -23,7 +23,7 @@ namespace NorthWestLabs.Controllers
             return View(db.Customers.ToList());
         }
 
-        public ActionResult WorkOrderList(int? id)
+       public ActionResult WorkOrderList(int? id)
         {
             if (id==null)
             {
@@ -31,11 +31,14 @@ namespace NorthWestLabs.Controllers
             }
 
             WorkOrders workOrders = db.WorkOrders.Find(id);
+           
             if (workOrders == null)
             {
                 return HttpNotFound();
             }
-            return View(workOrders);
+            return View(db.WorkOrders.ToList());
         }
+
+
     }
 }
