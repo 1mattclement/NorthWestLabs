@@ -39,12 +39,12 @@ namespace NorthWestLabs.Controllers
             if(string.Equals(username, "employee") && (string.Equals(password, "employee")))
             {
                 FormsAuthentication.SetAuthCookie(username, rememberMe);
-                return RedirectToAction("EmployeeInfo, Home"); //fix
+                return RedirectToAction("EmployeeInfo", "Home"); //fix
             }
             else if (string.Equals(username, "customer") && (string.Equals(password, "customer")))
             {
                 FormsAuthentication.SetAuthCookie(username, rememberMe);
-                return RedirectToAction("CustomerInfo, Home"); //fix
+                return RedirectToAction("CustomerInfo", "Home"); //fix
             }
             else
             {
@@ -56,13 +56,13 @@ namespace NorthWestLabs.Controllers
         [Authorize]
         public ActionResult EmployeeInfo()
         {
-            return View();
+            return RedirectToAction("Index", "Employee");
         }
 
         [Authorize]
         public ActionResult CustomerInfo()
         {
-            return View();
+            return RedirectToAction("Index", "Customer");
         }
     }
 }

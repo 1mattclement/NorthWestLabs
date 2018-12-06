@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NorthWestLabs.Models;
+using System.Data.Entity;
 
 namespace NorthWestLabs.Controllers
 {
@@ -29,10 +30,48 @@ namespace NorthWestLabs.Controllers
 
 
 
-        public ActionResult CreateWorkOrder()
+        public ActionResult CreateCompound()
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateCompound([Bind(Include = "LTNumber, CompoundName,Quantity,DateArrived,EmployeeID,DateDue,Appearance, Weight, MolecularMass, MTD")] Compound compound)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Compounds.Add(compound);
+                db.SaveChanges();
+                return RedirectToAction("WorkList");
+            }
+            return View(compound);
+        }
+
+
+        public ActionResult CreateWorkOrder()
+        {
+            ViewBag.Customers = db.Customers.ToList();
+            ViewBag.LTNumber = db.Compounds.ToList();
+            return View();
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateWorkOrder([Bind(Include = "WorkOrderID, Comments, RushOrder, CustomerID, PmtInfoID, LTNumber")] WorkOrders workOrders)
+        {
+               
+               
+            if (ModelState.IsValid)
+            {
+                db.WorkOrders.Add(workOrders);
+                db.SaveChanges();
+                return RedirectToAction("WorkList");
+            }
+            return View(workOrders);
+        }
     }
+
   
 }

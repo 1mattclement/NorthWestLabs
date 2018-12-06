@@ -21,7 +21,7 @@ namespace NorthWestLabs.Models
 
         [DisplayName("Customer ID")]
         [Required(ErrorMessage = "Please enter your customer ID")]
-        public int CustomerID { get; set; }
+        public int? CustomerID { get; set; }
         public virtual Customers Customers { get; set; }//add virtual
 
         /**[DisplayName("Payment Info")]
@@ -30,11 +30,10 @@ namespace NorthWestLabs.Models
 
         [DisplayName("LTNumber")]
         [Required(ErrorMessage = "Please enter your compound LTNumber")]
-        public int LTNumber { get; set; }
+        public int? LTNumber { get; set; }
         public virtual Compound Compound {get; set;}
 
-        public string AssayType { get; set; }
-        public virtual AssayCatalog AssayCatalog { get; set; }
+    
         
 
   
