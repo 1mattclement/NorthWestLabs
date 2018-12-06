@@ -143,6 +143,8 @@
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\CustomerList.cshtml" />
     <Content Include="Views\Employee\WorkOrderList.cshtml" />
+    <Content Include="Views\Employee\CompoundTestList.cshtml" />
+    <Content Include="Views\Employee\EditTest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

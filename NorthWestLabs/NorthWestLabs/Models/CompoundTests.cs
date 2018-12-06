@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace NorthWestLabs.Models
 {
@@ -19,8 +20,11 @@ namespace NorthWestLabs.Models
         public virtual TestCatalog TestCatalog { get; set; }//foreign key
         public int EmployeeID { get; set; }
         public virtual Employees Employees { get; set; }//foreign key
-        public int StatusID { get; set; }//foreign key
+        public int? StatusID { get; set; }//foreign key
         public virtual Status Status { get; set; }
+        public int WorkOrderID { get; set; }
+
+    
 
     }
 }

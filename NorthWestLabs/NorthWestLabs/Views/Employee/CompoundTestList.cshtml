@@ -1,0 +1,62 @@
+﻿@model IEnumerable<NorthWestLabs.Models.CompoundTests>
+
+@{
+    ViewBag.Title = "CompoundTestList";
+}
+
+<h2>CompoundTestList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employees.EmpFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.StatusDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestCatalog.TestTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrders.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LTNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SampleID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employees.EmpFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.StatusDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestCatalog.TestTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrders.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LTNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SampleID)
+        </td>
+        <td>
+            @Html.ActionLink("Update Test", "EditTest", new { id=item.TestID }) 
+            
+        </td>
+    </tr>
+}
+
+</table>

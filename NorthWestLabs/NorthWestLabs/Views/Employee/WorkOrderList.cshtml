@@ -43,9 +43,8 @@
             @Html.DisplayFor(modelItem => item.LTNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.WorkOrderID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.WorkOrderID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.WorkOrderID })
+            @Html.ActionLink("View Tests", "CompoundTestList", new { id = item.WorkOrderID }) |
+        
         </td>
     </tr>
     }

@@ -1,0 +1,59 @@
+﻿@model NorthWestLabs.Models.CompoundTests
+
+@{
+    ViewBag.Title = "EditTest";
+}
+
+<h2>EditTest</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>CompoundTests</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.TestID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LTNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LTNumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LTNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SampleID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SampleID, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SampleID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div>
+        @Html.DropDownListFor(Model => Model.StatusID, new SelectList(ViewBag.Status, "StatusID", "StatusDescription"))
+
+    </div>
+
+
+    <!---->
+    @Html.HiddenFor(Model => Model.TestTypeID)
+    @Html.HiddenFor(Model => Model.EmployeeID)
+    @Html.HiddenFor(Model => Model.WorkOrderID)
+    @Html.HiddenFor(Model => Model.TestID)
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "CompoundTestList")
+</div>
