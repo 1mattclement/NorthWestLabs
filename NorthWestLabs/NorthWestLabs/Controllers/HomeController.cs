@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace NorthWestLabs.Controllers
 {
@@ -24,6 +25,11 @@ namespace NorthWestLabs.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
@@ -32,10 +38,12 @@ namespace NorthWestLabs.Controllers
 
             if(string.Equals(username, "employee") && (string.Equals(password, "employee")))
             {
+                FormsAuthentication.SetAuthCookie(username, rememberMe);
                 return RedirectToAction("EmployeeInfo, Home"); //fix
             }
             else if (string.Equals(username, "customer") && (string.Equals(password, "customer")))
             {
+                FormsAuthentication.SetAuthCookie(username, rememberMe);
                 return RedirectToAction("CustomerInfo, Home"); //fix
             }
             else
