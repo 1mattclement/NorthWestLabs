@@ -17,7 +17,9 @@ namespace NorthWestLabs.Models
         public string CompoundName { get; set; }
         public double Quantity { get; set; }
         public DateTime DateArrived { get; set; }
-        public int? EmployeeID { get; set; } //Foriegn Key
+        //public int? EmployeeID { get; set; } 
+       // public virtual Employees Employees { get; set; }
+       //Foriegn Key
         public DateTime DateDue { get; set; }
         public string Appearance { get; set; }
         public double Weight { get; set; }
