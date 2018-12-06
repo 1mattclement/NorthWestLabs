@@ -41,9 +41,12 @@ namespace NorthWestLabs.Models
         [Required(ErrorMessage = "Please enter your email address!")]
         public string CustEmail { get; set; }
 
-        public int? SalesRepID { get; set; } //virtual
+        public int? SalesRepID { get; set; } 
+        public virtual Employees Employees {get; set;}
+       
         public string Comments { get; set; }
-        public int? DiscountID { get; set; }
+
+        //public int? DiscountID { get; set; }
       
 
 

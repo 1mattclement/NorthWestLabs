@@ -21,7 +21,8 @@ namespace NorthWestLabs.Models
 
         [DisplayName("Customer ID")]
         [Required(ErrorMessage = "Please enter your customer ID")]
-        public int CustomerID { get; set; } //add virtual
+        public int CustomerID { get; set; } 
+        public virtual Customers Customers { get; set; }//add virtual
 
         [DisplayName("Payment Info")]
         [Required(ErrorMessage = "Please enter your payment ID")]
