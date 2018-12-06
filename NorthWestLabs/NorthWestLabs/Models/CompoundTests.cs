@@ -24,7 +24,5 @@ namespace NorthWestLabs.Models
         public virtual Status Status { get; set; }
         public int WorkOrderID { get; set; }
 
-    
-
     }
 }

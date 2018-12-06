@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\NorthwestLabsContext.cs" />
@@ -145,6 +146,9 @@
     <Content Include="Views\Employee\WorkOrderList.cshtml" />
     <Content Include="Views\Employee\CompoundTestList.cshtml" />
     <Content Include="Views\Employee\EditTest.cshtml" />
+    <Content Include="Views\Customer\TestList.cshtml" />
+    <Content Include="Views\Customer\WorkList.cshtml" />
+    <Content Include="Views\Customer\CreateWorkOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
