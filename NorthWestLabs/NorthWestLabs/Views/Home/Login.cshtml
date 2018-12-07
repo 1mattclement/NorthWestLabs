@@ -1,15 +1,19 @@
 ﻿
 @{
-    ViewBag.Title = "Login";
+   ViewBag.Title = "Login";
 }
-
 <h2>Login</h2>
+<br />
 
 @using (Html.BeginForm("Login", "Home", FormMethod.Post))
 {
-    <label for="inputUsername">Username</label>
-    @Html.TextBox("Username")
-    <label for="inputPassword">Password</label>
-    @Html.Password("Password")
-    <button type="submit">Login</button>
+   <label for="inputUsername">Username</label>
+   @Html.TextBox("Username")
+   <br />
+   <br />
+   <label for="inputPassword">Password</label>
+   @Html.Password("Password")
+   <br />
+   <br />
+   <button type="submit">Login</button>
 }
