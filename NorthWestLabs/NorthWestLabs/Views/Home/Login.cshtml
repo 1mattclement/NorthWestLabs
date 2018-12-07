@@ -1,26 +1,26 @@
 ﻿
 @{
-            /**/
-
             ViewBag.Title = "Login";
 }
-<h2>Login</h2>
-<br />
 
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
-{
-   <label for="inputUsername">Username</label>
-   @Html.TextBox("Username")
-   <br />
-   <br />
-   <label for="inputPassword">Password</label>
-   @Html.Password("Password")
-   <br />
-   <br />
+<div class="box2">
+    <div class="centered"><h2 class="myFooterText text2">Login</h2></div>
+    <br />
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <label class="text3" for="inputUsername">Username </label>
+        @Html.TextBox("Username")
+        <br />
+        <br />
+        <label class="text3" for="inputPassword">Password </label>
+        @Html.Password("Password")
+        <br />
+        <br />
 
-   <div class="form-group">
-      <div style="padding-left:70px">
-         <input type="submit" value="Login" class="btn btn-default" />
-      </div>
-   </div>
-}
+        <div class="form-group">
+            <div style="padding-left:70px">
+                <input type="submit" value="Login" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>
