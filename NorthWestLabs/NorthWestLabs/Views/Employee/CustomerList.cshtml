@@ -8,7 +8,7 @@
 
 <div class="table-responsive">
    <table class="table table-bordered">
-      <tr class="active">
+      <tr style="color:white">
          <th>
             @Html.DisplayNameFor(model => model.Employees.EmpFirstName)
          </th>
@@ -41,7 +41,7 @@
 
       @foreach (var item in Model)
       {
-         <tr>
+         <tr class="active">
             <td>
                @Html.DisplayFor(modelItem => item.Employees.EmpFirstName)
             </td>
