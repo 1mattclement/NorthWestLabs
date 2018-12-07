@@ -2,7 +2,15 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+.box {
+    background-color: white;
+    width: 1000px;
+    padding: 25px;
+    margin: auto;
+}
+.centered {
+    text-align: center
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -20,10 +28,14 @@ body {
 }
 
 .myFooterText {
-    font-family: Georgia
+    font-family: Georgia;
+    
+       
 }
 
 body {
+    background-image: url("Background4.png");
+    background-size: cover;
 }
 
 .center {
