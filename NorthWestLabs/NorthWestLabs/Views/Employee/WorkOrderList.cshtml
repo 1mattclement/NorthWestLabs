@@ -7,9 +7,9 @@
 <h2>WorkOrderList</h2>
 
 <div class="table-responsive">
-   <table class="table table-bordered">
+   <table class="table table-bordered" style="border-width:thick">
       <tr class="active">
-         <th>
+         <th class="label-info">
             @Html.DisplayNameFor(model => model.Customers.CustFirstName)
          </th>
          <th>
@@ -26,7 +26,7 @@
 
       @foreach (var item in Model)
       {
-         <tr>
+         <tr class="active">
             <td>
                @Html.DisplayFor(modelItem => item.Customers.CustFirstName)
             </td>
