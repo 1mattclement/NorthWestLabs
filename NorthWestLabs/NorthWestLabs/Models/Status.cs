@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -11,7 +12,10 @@ namespace NorthWestLabs.Models
     public class Status
     {
         [Key]
+        [DisplayName("Status ID")]
         public int StatusID { get; set; }
+
+        [DisplayName("Status Description")]
         public string StatusDescription { get; set; }
     }
 }

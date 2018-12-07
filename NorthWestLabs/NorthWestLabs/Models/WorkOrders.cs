@@ -12,6 +12,7 @@ namespace NorthWestLabs.Models
     public class WorkOrders
     {
         [Key]
+        [DisplayName("Work Order ID")]
         public int WorkOrderID { get; set; }
 
         public string Comments { get; set; }
@@ -28,7 +29,7 @@ namespace NorthWestLabs.Models
         [Required(ErrorMessage = "Please enter your payment ID")]
         public int PmtInfoID { get; set; }**/
 
-        [DisplayName("LTNumber")]
+        [DisplayName("LT Number")]
         [Required(ErrorMessage = "Please enter your compound LTNumber")]
         public int? LTNumber { get; set; }
         public virtual Compound Compound {get; set;}
