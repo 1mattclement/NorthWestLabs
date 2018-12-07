@@ -6,47 +6,48 @@
 
 <h2>Work Order List</h2>
 
-<table class="table">
-    <tr>
-        <th>
+<div class="table-responsive">
+   <table class="table table-bordered">
+      <tr class="active">
+         <th>
             @Html.DisplayNameFor(model => model.Customers.CustFirstName)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.WorkOrderID)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.Comments)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.RushOrder)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.LTNumber)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Customers.CustFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(model => item.WorkOrderID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comments)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RushOrder)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LTNumber)
-        </td>
-        <td>
-            @Html.ActionLink("View Test Status", "TestList", new { id=item.WorkOrderID })
-        </td>
-    </tr>
-}
-
-</table>
+         </th>
+         <th></th>
+      </tr>
+      @foreach (var item in Model)
+      {
+         <tr>
+            <td>
+               @Html.DisplayFor(modelItem => item.Customers.CustFirstName)
+            </td>
+            <td>
+               @Html.DisplayFor(model => item.WorkOrderID)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.RushOrder)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.LTNumber)
+            </td>
+            <td>
+               @Html.ActionLink("View Test Status", "TestList", new { id = item.WorkOrderID })
+            </td>
+         </tr>
+      }
+   </table>
+</div>

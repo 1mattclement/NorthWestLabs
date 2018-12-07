@@ -6,54 +6,55 @@
 
 <h2>Test Status</h2>
 
-<table class="table">
-    <tr>
-        <th>
+<div class="table-responsive">
+   <table class="table table-bordered">
+      <tr class="active">
+         <th>
             @Html.DisplayNameFor(model => model.TestID)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.Employees.EmpFirstName)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.Status.StatusDescription)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.TestCatalog.TestTypeID)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.WorkOrders.Comments)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.LTNumber)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.SampleID)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>@Html.DisplayFor(modelItem => item.TestID)</td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Employees.EmpFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status.StatusDescription)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TestCatalog.TestTypeID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorkOrders.Comments)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LTNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SampleID)
-        </td>
-    </tr>
-}
-
-</table>
+         </th>
+         <th></th>
+      </tr>
+      @foreach (var item in Model)
+      {
+         <tr>
+            <td>@Html.DisplayFor(modelItem => item.TestID)</td>
+            <td>
+               @Html.DisplayFor(modelItem => item.Employees.EmpFirstName)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.Status.StatusDescription)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.TestCatalog.TestTypeID)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.WorkOrders.Comments)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.LTNumber)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.SampleID)
+            </td>
+         </tr>
+      }
+   </table>
+</div>

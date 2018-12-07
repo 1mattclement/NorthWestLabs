@@ -4,74 +4,76 @@
     ViewBag.Title = "Customer List";
 }
 
-<h2>CustomerList</h2>
+<h2>Customer List</h2>
 
-<table class="table">
-    <tr>
-        <th>
+<div class="table-responsive">
+   <table class="table table-bordered">
+      <tr class="active">
+         <th>
             @Html.DisplayNameFor(model => model.Employees.EmpFirstName)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustFirstName)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustLastName)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustAddress)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustState)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustZIP)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustPhone)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.CustEmail)
-        </th>
-        <th>
+         </th>
+         <th>
             @Html.DisplayNameFor(model => model.Comments)
-        </th>
-        <th></th>
-    </tr>
+         </th>
+         <th></th>
+      </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Employees.EmpFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustState)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustZIP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comments)
-        </td>
-        <td>
-            @Html.ActionLink("Work Order", "WorkOrderList", new { id=item.CustomerID }) 
-           
-        </td>
-    </tr>
-}
+      @foreach (var item in Model)
+      {
+         <tr>
+            <td>
+               @Html.DisplayFor(modelItem => item.Employees.EmpFirstName)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustFirstName)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustLastName)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustAddress)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustState)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustZIP)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustPhone)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.CustEmail)
+            </td>
+            <td>
+               @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+               @Html.ActionLink("Work Order", "WorkOrderList", new { id = item.CustomerID })
 
-</table>
+            </td>
+         </tr>
+      }
+   </table>
+</div>
