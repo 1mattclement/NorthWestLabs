@@ -3,9 +3,17 @@
     width: 1000px;
     padding: 25px;
     margin: auto;
+    opacity: .5;
 }
 .text {
     font-size: 30px;
+    
+}
+
+.text2 {
+    font-size: 50px;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .centered {
     text-align: center;
@@ -23,15 +31,13 @@ textarea {
     max-width: 280px;
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 93076d9b3b0a22f715b0f065e10f88d21d60a1d4
 .myFooterText {
     font-family: Georgia;
-    
        
 }
+
+
 
 body {
    padding-top: 50px;
