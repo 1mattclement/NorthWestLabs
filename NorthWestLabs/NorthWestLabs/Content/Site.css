@@ -1,8 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-.box {
+﻿.box {
     background-color: white;
     width: 1000px;
     padding: 25px;
@@ -27,7 +23,10 @@ textarea {
     max-width: 280px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 93076d9b3b0a22f715b0f065e10f88d21d60a1d4
 .myFooterText {
     font-family: Georgia;
     
@@ -35,8 +34,10 @@ textarea {
 }
 
 body {
-    background-image: url("Background4.png");
-    background-size: cover;
+   padding-top: 50px;
+   padding-bottom: 20px;
+   background-image: url("Background4.png");
+   background-size: cover;
 }
 
 .center {
