@@ -3,12 +3,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="centered"><h2>Welcome!</h2></div>
+<div class="box text centered">
+    @Html.ActionLink("Add Compound", "CreateCompound")<br />
 
-@Html.ActionLink("Add Compound", "CreateCompound")<br />
+    @Html.ActionLink("Create a Work Order", "CreateWorkOrder")<br />
 
-@Html.ActionLink("Create a Work Order", "CreateWorkOrder")<br />
-
-@Html.ActionLink("View Work Orders", "WorkList")<br />
-
+    @Html.ActionLink("View Work Orders", "WorkList")<br />
+</div>
 

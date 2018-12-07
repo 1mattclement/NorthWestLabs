@@ -8,8 +8,11 @@
     padding: 25px;
     margin: auto;
 }
+.text {
+    font-size: 30px;
+}
 .centered {
-    text-align: center
+    text-align: center;
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -24,8 +27,6 @@ textarea {
     max-width: 280px;
 }
 
-body {
-}
 
 .myFooterText {
     font-family: Georgia;
