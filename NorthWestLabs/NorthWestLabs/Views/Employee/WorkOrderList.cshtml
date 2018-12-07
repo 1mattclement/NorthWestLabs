@@ -27,19 +27,19 @@
       @foreach (var item in Model)
       {
          <tr>
-            <td class="active">
+            <td>
                @Html.DisplayFor(modelItem => item.Customers.CustFirstName)
             </td>
             <td>
                @Html.DisplayFor(modelItem => item.Comments)
             </td>
-            <td  class="active">
+            <td>
                @Html.DisplayFor(modelItem => item.RushOrder)
             </td>
             <td>
                @Html.DisplayFor(modelItem => item.LTNumber)
             </td>
-            <td  class="active">
+            <td>
                @Html.ActionLink("View Tests", "CompoundTestList", new { id = item.WorkOrderID })
 
             </td>
